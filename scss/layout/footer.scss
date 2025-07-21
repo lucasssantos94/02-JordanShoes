@@ -1,0 +1,16 @@
+@use '../patterns/colors.scss' as colors;
+@use '../mixins/mixins' as mixins;
+
+footer {
+  background-color: colors.$brand-color;
+  .container {
+    @include mixins.flex-element($justify: center, $align: center);
+    padding: 2.4rem 0;
+    p {
+      color: colors.$dark-30;
+      a {
+        color: colors.$dark-10;
+      }
+    }
+  }
+}

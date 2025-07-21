@@ -1,0 +1,50 @@
+@use "../mixins/mixins" as mixins;
+@use "../patterns/colors" as colors;
+
+.s-cards {
+  padding: 8rem 0;
+  @include mixins.media-query("md") {
+    padding: 0;
+  }
+
+  .section-text {
+    @include mixins.flex-element($direction: column, $align: center);
+    p {
+      max-width: 59.3rem;
+      margin-top: 2.4rem;
+      line-height: 140%;
+    }
+  }
+}
+
+.cards {
+  padding-top: 7.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(38.4rem, 1fr));
+  grid-gap: 3.2rem;
+  @include mixins.media-query("lg") {
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    padding-top: 4rem;
+  }
+  @include mixins.media-query('sm') {
+    justify-content: center;
+  }
+
+  .card-shoes {
+    width: 100%;
+    max-width: 38.4rem;
+
+    .image-shoes {
+      padding: 3.2rem 0;
+      @include mixins.flex-element($justify: center, $align: center);
+      background-color: colors.$dark-20;
+    }
+    .shoes-name {
+      margin: 2.4rem 0 1.2rem 0;
+    }
+    .slug {
+      display: block;
+      margin-bottom: 1.2rem;
+    }
+  }
+}

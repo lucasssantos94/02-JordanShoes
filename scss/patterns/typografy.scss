@@ -1,0 +1,19 @@
+@use './colors.scss' as colors;
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+p {
+  font-size: clamp(1.4rem, 2.5vw, 2.4rem);
+  line-height: 1.5;
+}
+
+h3, h2 {
+  font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+}
+
+.slug {
+  font-size: 1.6rem;
+  color: colors.$brand-color;
+}
